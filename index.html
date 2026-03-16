@@ -2,9 +2,9 @@
 <html>
 
 <head>
+
 <title>Redline X</title>
 
-<!-- TAB ICON -->
 <link rel="icon" type="image/png" href="logo.png">
 
 <style>
@@ -12,60 +12,123 @@
 body{
 margin:0;
 font-family:Arial;
-color:white;
 background:black;
+color:white;
 }
 
 /* HERO SECTION */
+
 .hero{
+
 height:100vh;
-background-image:url("https://images.unsplash.com/photo-1511919884226-fd3cad34687c");
-background-size:cover;
-background-position:center;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+
+background:
+linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+url("https://images.unsplash.com/photo-1542362567-b07e54358753");
+
+background-size:cover;
+background-position:center;
+
+animation:moveTrack 20s linear infinite;
+
+}
+
+@keyframes moveTrack{
+
+0%{
+background-position:center 0px;
+}
+
+100%{
+background-position:center -200px;
+}
+
 }
 
 .hero h1{
-font-size:70px;
+
+font-size:80px;
 color:#ff2b2b;
 margin:0;
+
 }
 
 .hero h2{
+
 font-weight:normal;
+margin-top:10px;
+
+}
+
+/* DISCORD BUTTON */
+
+.discord-btn{
+
+margin-top:30px;
+padding:15px 30px;
+font-size:18px;
+background:#5865F2;
+border:none;
+color:white;
+cursor:pointer;
+border-radius:6px;
+
 }
 
 /* SECTION STYLE */
+
 .section{
-padding:60px;
+
+padding:80px 20px;
 text-align:center;
 background:#111;
+
 }
 
 .section h2{
+
 color:#ff2b2b;
 font-size:36px;
+
 }
 
 .info{
-max-width:800px;
+
+max-width:900px;
 margin:auto;
 font-size:18px;
 line-height:1.6;
+
 }
 
 /* LAUNCH BOX */
 
 .launch{
+
 background:#1a1a1a;
 padding:40px;
-margin-top:20px;
+margin-top:30px;
 border:2px solid red;
 display:inline-block;
+font-size:22px;
+
+}
+
+/* FOOTER */
+
+.footer{
+
+background:black;
+padding:30px;
+text-align:center;
+font-size:14px;
+color:#888;
+
 }
 
 </style>
@@ -75,10 +138,22 @@ display:inline-block;
 <body>
 
 <!-- HERO -->
+
 <div class="hero">
 
 <h1>REDLINE X</h1>
+
 <h2>By Anitomi Studios</h2>
+
+<a href="https://discord.gg/a9NbthPJ" target="_blank">
+
+<button class="discord-btn">
+
+Join Our Discord
+
+</button>
+
+</a>
 
 </div>
 
@@ -90,14 +165,16 @@ display:inline-block;
 
 <div class="info">
 
-RedlineX is a high-speed racing experience built for motorsport fans.
-Race across detailed circuits, push your car to the limit, and compete for pole position in intense races feel the thrill of motorsports
+Redline X is a high-speed racing experience focused on precision driving and competitive motorsport.  
+Race across challenging circuits, master high-performance machines, and compete for pole position.
+
+Built with a passion for racing simulations, the game focuses on immersive environments, fast gameplay, and intense racing action.
 
 </div>
 
 </div>
 
-<!-- LAUNCH DATE -->
+<!-- LAUNCH -->
 
 <div class="section">
 
@@ -105,7 +182,7 @@ Race across detailed circuits, push your car to the limit, and compete for pole 
 
 <div class="launch">
 
-Launching Early Access: <b>Mid/Late 2026 to early 2027</b>
+Launching in 2026
 
 </div>
 
@@ -119,10 +196,19 @@ Launching Early Access: <b>Mid/Late 2026 to early 2027</b>
 
 <div class="info">
 
-Redline X is being developed by <b>Anitomi Studios</b>, an indie game studio focused on racing games and simulation environments.  
-The project focuses on realistic tracks and immersive motorsport gameplay.
+Redline X is developed by <b>Anitomi Studios</b>, an indie game development studio focused on motorsport games and simulation environments.
+
+The studio aims to create immersive racing experiences inspired by real-world motorsport and modern racing simulators.
 
 </div>
+
+</div>
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+© 2026 Anitomi Studios — Redline X
 
 </div>
 
