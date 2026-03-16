@@ -1,134 +1,153 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
 
+<meta charset="UTF-8">
 <title>Redline X</title>
 
-<link rel="icon" type="image/png" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
 
 body{
 margin:0;
-font-family:Arial;
 background:black;
 color:white;
+font-family:'Orbitron', sans-serif;
+overflow-x:hidden;
 }
 
-/* HERO SECTION */
+/* animated racing gradient */
+
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background:linear-gradient(120deg,#000000,#1a0000,#5c0000,#000000);
+background-size:400% 400%;
+animation:bgmove 15s infinite linear;
+z-index:-2;
+}
+
+@keyframes bgmove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* hero section */
 
 .hero{
-
 height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-
-background:
-linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-url("https://images.unsplash.com/photo-1542362567-b07e54358753");
-
-background-size:cover;
-background-position:center;
-
-animation:moveTrack 20s linear infinite;
-
-}
-
-@keyframes moveTrack{
-
-0%{
-background-position:center 0px;
-}
-
-100%{
-background-position:center -200px;
-}
-
+padding:20px;
 }
 
 .hero h1{
-
 font-size:80px;
-color:#ff2b2b;
-margin:0;
-
+color:#ff2a2a;
+letter-spacing:5px;
+margin-bottom:10px;
 }
 
-.hero h2{
-
-font-weight:normal;
-margin-top:10px;
-
+.hero p{
+font-size:22px;
+opacity:0.85;
+max-width:700px;
 }
 
-/* DISCORD BUTTON */
+/* buttons */
 
-.discord-btn{
-
-margin-top:30px;
-padding:15px 30px;
-font-size:18px;
-background:#5865F2;
-border:none;
+.button{
+margin-top:25px;
+padding:15px 35px;
+background:#ff2a2a;
 color:white;
-cursor:pointer;
+text-decoration:none;
 border-radius:6px;
-
+font-size:18px;
+transition:0.3s;
 }
 
-/* SECTION STYLE */
+.button:hover{
+background:#ff0000;
+transform:scale(1.05);
+}
+
+/* sections */
 
 .section{
-
-padding:80px 20px;
+padding:80px 10%;
 text-align:center;
-background:#111;
-
 }
 
 .section h2{
-
-color:#ff2b2b;
-font-size:36px;
-
+font-size:40px;
+color:#ff2a2a;
+margin-bottom:20px;
 }
 
-.info{
-
+.section p{
+font-size:18px;
 max-width:900px;
 margin:auto;
-font-size:18px;
-line-height:1.6;
-
+line-height:1.7;
+opacity:0.9;
 }
 
-/* LAUNCH BOX */
+/* f1 background image */
 
-.launch{
-
-background:#1a1a1a;
-padding:40px;
-margin-top:30px;
-border:2px solid red;
-display:inline-block;
-font-size:22px;
-
+.f1bg{
+background-image:url("https://upload.wikimedia.org/wikipedia/commons/5/5d/Formula_One_car.jpg");
+background-size:cover;
+background-position:center;
+padding:120px 10%;
+position:relative;
 }
 
-/* FOOTER */
+.f1bg::after{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+}
 
-.footer{
+.f1bg-content{
+position:relative;
+z-index:2;
+}
 
-background:black;
+/* albert park section */
+
+.track{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.track img{
+width:80%;
+max-width:700px;
+border-radius:10px;
+margin-top:25px;
+}
+
+/* footer */
+
+footer{
 padding:30px;
 text-align:center;
+background:#0a0a0a;
 font-size:14px;
-color:#888;
-
+opacity:0.6;
 }
 
 </style>
@@ -139,79 +158,90 @@ color:#888;
 
 <!-- HERO -->
 
-<div class="hero">
+<section class="hero">
 
 <h1>REDLINE X</h1>
 
-<h2>By Anitomi Studios</h2>
+<p>
+A next-generation Formula 1 inspired racing simulator focused on precision,
+speed, and authentic circuit racing.
+</p>
 
-<a href="https://discord.gg/a9NbthPJ" target="_blank">
-
-<button class="discord-btn">
-
-Join Our Discord
-
-</button>
-
+<a class="button" href="https://discord.gg/a9NbthPJ" target="_blank">
+Join the Community
 </a>
 
+</section>
+
+<!-- ABOUT F1 -->
+
+<section class="section f1bg">
+
+<div class="f1bg-content">
+
+<h2>Inspired by Formula One</h2>
+
+<p>
+Redline X is built around the spirit of Formula One — the pinnacle of motorsport.
+Every element of the game focuses on the engineering, speed, and precision that
+defines modern F1 racing.
+
+From high-downforce open wheel cars to world famous circuits, Redline X aims
+to capture the intensity of Formula One competition. Players will experience
+the challenge of mastering technical corners, maximizing speed on long straights,
+and managing racing lines just like professional F1 drivers.
+</p>
+
 </div>
 
-<!-- GAME INFO -->
+</section>
 
-<div class="section">
+<!-- TRACK SECTION -->
 
-<h2>About the Game</h2>
+<section class="section track">
 
-<div class="info">
+<h2>First Early Access Circuit</h2>
 
-Redline X is a high-speed racing experience focused on precision driving and competitive motorsport.  
-Race across challenging circuits, master high-performance machines, and compete for pole position.
+<p>
+The first playable circuit in Redline X Early Access will be the legendary
+Albert Park Circuit in Melbourne, Australia — home of the Australian
+Grand Prix and one of the most exciting street circuits in Formula One.
+</p>
 
-Built with a passion for racing simulations, the game focuses on immersive environments, fast gameplay, and intense racing action.
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Albert_Lake_Park_Street_Circuit_in_Melbourne%2C_Australia.svg">
 
-</div>
+<p style="margin-top:20px;">
+Players will be able to race on this circuit as the first testing ground
+for the Redline X physics engine and racing mechanics. Redline X is based on the Godot Engine aiming to give good performance and graphics even to low end deivces
+  
+</p>
 
-</div>
+</section>
 
 <!-- LAUNCH -->
 
-<div class="section">
+<section class="section">
 
-<h2>Launch Date</h2>
+<h2>Early Access Launch</h2>
 
-<div class="launch">
+<p>
+Redline X will launch in Early Access as development progresses.
+Players will gain access to the first cars, physics systems, and
+the Albert Park circuit while the game continues to expand with
+new tracks, improved mechanics, and more realistic racing systems.
+</p>
 
-Launching in 2026
+<a class="button" href="https://discord.gg/a9NbthPJ" target="_blank">
+Follow Development
+</a>
 
-</div>
+</section>
 
-</div>
+<footer>
 
-<!-- ABOUT DEV -->
+Redline X © Anitomi Studios
 
-<div class="section">
-
-<h2>About the Developer</h2>
-
-<div class="info">
-
-Redline X is developed by <b>Anitomi Studios</b>, an indie game development studio focused on motorsport games and simulation environments.
-
-The studio aims to create immersive racing experiences inspired by real-world motorsport and modern racing simulators.
-
-</div>
-
-</div>
-
-<!-- FOOTER -->
-
-<div class="footer">
-
-© 2026 Anitomi Studios — Redline X
-
-</div>
+</footer>
 
 </body>
-
 </html>
