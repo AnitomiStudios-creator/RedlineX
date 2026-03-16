@@ -103,13 +103,27 @@ opacity:0.9;
 /* f1 background image */
 
 .f1bg{
-background-image:url("https://upload.wikimedia.org/wikipedia/commons/5/5d/Formula_One_car.jpg");
+background-image:url("https://upload.wikimedia.org/wikipedia/commons/0/0b/Formula_One_2019_car.jpg");
 background-size:cover;
 background-position:center;
-padding:120px 10%;
 position:relative;
+padding:120px 10%;
 }
 
+.overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.65);
+}
+
+.content{
+position:relative;
+z-index:2;
+text-align:center;
+}
 .f1bg::after{
 content:"";
 position:absolute;
@@ -133,13 +147,13 @@ flex-direction:column;
 align-items:center;
 }
 
-.track img{
-width:80%;
-max-width:700px;
-border-radius:10px;
-margin-top:25px;
+.albertpark{
+background-image:url("https://upload.wikimedia.org/wikipedia/commons/6/6f/Albert_Park_Circuit_Aerial.jpg");
+background-size:cover;
+background-position:center;
+position:relative;
+padding:120px 10%;
 }
-
 /* footer */
 
 footer{
@@ -177,19 +191,16 @@ Join the Community
 
 <section class="section f1bg">
 
-<div class="f1bg-content">
+<div class="overlay"></div>
+
+<div class="content">
 
 <h2>Inspired by Formula One</h2>
 
 <p>
 Redline X is built around the spirit of Formula One — the pinnacle of motorsport.
-Every element of the game focuses on the engineering, speed, and precision that
-defines modern F1 racing.
-
-From high-downforce open wheel cars to world famous circuits, Redline X aims
-to capture the intensity of Formula One competition. Players will experience
-the challenge of mastering technical corners, maximizing speed on long straights,
-and managing racing lines just like professional F1 drivers.
+The game focuses entirely on open-wheel Formula racing with high-downforce cars,
+precision cornering, and technical circuits inspired by the real F1 calendar.
 </p>
 
 </div>
@@ -198,23 +209,26 @@ and managing racing lines just like professional F1 drivers.
 
 <!-- TRACK SECTION -->
 
-<section class="section track">
+<section class="section albertpark">
+
+<div class="overlay"></div>
+
+<div class="content">
 
 <h2>First Early Access Circuit</h2>
 
 <p>
-The first playable circuit in Redline X Early Access will be the legendary
-Albert Park Circuit in Melbourne, Australia — home of the Australian
-Grand Prix and one of the most exciting street circuits in Formula One.
+The first playable circuit in Redline X Early Access will be the iconic
+Albert Park Circuit in Melbourne, Australia — home of the Australian Grand Prix.
 </p>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Albert_Lake_Park_Street_Circuit_in_Melbourne%2C_Australia.svg">
-
-<p style="margin-top:20px;">
-Players will be able to race on this circuit as the first testing ground
-for the Redline X physics engine and racing mechanics. Redline X is based on the Godot Engine aiming to give good performance and graphics even to low end deivces
-  
+<p>
+Players will experience the fast chicanes, technical braking zones,
+and flowing layout that makes Albert Park one of Formula One’s most
+exciting opening races of the season.
 </p>
+
+</div>
 
 </section>
 
