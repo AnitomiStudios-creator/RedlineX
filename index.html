@@ -45,6 +45,11 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+background:
+linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+url("https://images.unsplash.com/photo-1603791440384-56cd371ee9a7");
+background-size:cover;
+background-position:center;
 }
 
 /* F1 LIGHTS */
@@ -110,32 +115,29 @@ text-align:center;
 position:relative;
 }
 
-.overlay{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.65);
-}
-
 /* F1 BACKGROUND */
 
 .f1bg{
-background:url("https://upload.wikimedia.org/wikipedia/commons/0/0b/Formula_One_2019_car.jpg") center/cover;
+background:
+linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+url("https://images.unsplash.com/photo-1618160702438-9b02ab6515c9");
+background-size:cover;
+background-position:center;
 }
 
 /* ALBERT PARK */
 
 .albert{
-background:url("https://upload.wikimedia.org/wikipedia/commons/6/6f/Albert_Park_Circuit_Aerial.jpg") center/cover;
+background:
+linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+url("https://upload.wikimedia.org/wikipedia/commons/6/6f/Albert_Park_Circuit_Aerial.jpg");
+background-size:cover;
+background-position:center;
 }
 
 /* CONTENT */
 
 .content{
-position:relative;
-z-index:2;
 max-width:900px;
 margin:auto;
 }
@@ -200,8 +202,6 @@ Join Discord
 
 <section class="section f1bg">
 
-<div class="overlay"></div>
-
 <div class="content">
 
 <h2>Inspired by Formula One</h2>
@@ -219,8 +219,6 @@ like never before with realistic physics and high-speed circuits.
 <!-- ALBERT PARK -->
 
 <section class="section albert">
-
-<div class="overlay"></div>
 
 <div class="content">
 
@@ -258,6 +256,27 @@ initial vehicles, and the Albert Park circuit. More content will be added over t
 Redline X © Anitomi Studios
 </footer>
 
+<!-- COUNTDOWN -->
+
+<script>
+
+const launchDate = new Date("Jan 1, 2026 00:00:00").getTime();
+
+setInterval(function(){
+
+let now = new Date().getTime();
+let distance = launchDate - now;
+
+let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+document.getElementById("countdown").innerHTML =
+"Early Access in: " + days + "d " + hours + "h " + minutes + "m";
+
+}, 1000);
+
+</script>
 
 </body>
 </html>
